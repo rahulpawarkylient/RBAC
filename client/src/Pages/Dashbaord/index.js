@@ -45,7 +45,9 @@ function Dashboard() {
         const inventoryResponse = await getInventory();
         setInventory(inventoryResponse.total);
 
-        const customersResponse = await axios.get("http://localhost:9000/api/customer");
+        const customersResponse = await axios.get(
+          "http://localhost:9000/api/customer"
+        );
         setCustomers(customersResponse.data.length);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -56,7 +58,7 @@ function Dashboard() {
   }, []);
 
   return (
-    <Space size={20} direction="vertical">
+    <Space size={20} direction="vertical" className="spacebox">
       <Typography.Title level={4}>Dashboard</Typography.Title>
       <Space direction="horizontal">
         <DashboardCard

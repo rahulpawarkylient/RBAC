@@ -5,7 +5,7 @@ import { getOrders } from "../../API";
 function Orders() {
   const [loading, setLoading] = useState(false);
   const [dataSource, setDataSource] = useState([]);
-  
+
   useEffect(() => {
     const fetchOrderData = async () => {
       try {
@@ -14,16 +14,15 @@ function Orders() {
         setDataSource(ordersResponse.products);
         setLoading(false);
       } catch (error) {
-        console.error('Error fetching order data:', error);
+        console.error("Error fetching order data:", error);
       }
     };
-  
-    fetchOrderData(); 
+
+    fetchOrderData();
   }, []);
-  
 
   return (
-    <Space size={20} direction="vertical">
+    <Space size={20} direction="vertical" className="spacebox">
       <Typography.Title level={4}>Orders</Typography.Title>
       <Table
         loading={loading}

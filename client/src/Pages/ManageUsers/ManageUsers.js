@@ -33,7 +33,7 @@ const ManageUsers = () => {
   };
 
   return (
-    <Space size={20} direction="vertical">
+    <Space size={20} direction="vertical" className="spacebox">
       <Typography.Title level={4}>Users</Typography.Title>
       <Table
         loading={loading}

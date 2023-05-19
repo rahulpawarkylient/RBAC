@@ -5,7 +5,7 @@ import { getInventory } from "../../API";
 function Inventory() {
   const [loading, setLoading] = useState(false);
   const [dataSource, setDataSource] = useState([]);
-  
+
   useEffect(() => {
     const fetchInventoryData = async () => {
       try {
@@ -14,15 +14,15 @@ function Inventory() {
         setDataSource(inventoryResponse.products);
         setLoading(false);
       } catch (error) {
-        console.error('Error fetching inventory data:', error);
+        console.error("Error fetching inventory data:", error);
       }
     };
-  
+
     fetchInventoryData();
   }, []);
-  
+
   return (
-    <Space size={20} direction="vertical">
+    <Space size={20} direction="vertical"className="spacebox">
       <Typography.Title level={4}>Inventory</Typography.Title>
       <Table
         loading={loading}

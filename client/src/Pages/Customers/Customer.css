@@ -56,6 +56,10 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-  
-
 /* View customer detail page css  */
+
+/* Main Page of customer css  */
+
+.search {
+  display: flex;
+}

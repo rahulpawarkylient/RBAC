@@ -84,8 +84,10 @@ function Customers({ userRole }) {
   };
 
   return (
-    <Space size={20} direction="vertical">
-      <Typography.Title level={4}>Customers</Typography.Title>
+    <Space size={20} direction="vertical" className="spacebox">
+      <Typography.Title level={4}>
+        Customers
+      </Typography.Title>
       <Search
         placeholder="Search customers"
         onSearch={handleSearch}
